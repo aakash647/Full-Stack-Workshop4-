@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header id="hero">
+    <video autoplay loop muted id="video-background" playsinline>
+      <source src="background-loop.mp4" type="video/mp4">
+      <!-- If you don't have a video, the background will fall back to a gradient -->
+    </video>
+
+    <nav class="navbar" role="navigation" aria-label="Main Navigation">
+      <span class="logo">My Portfolio</span>
+
+      <button class="menu-toggle" aria-expanded="false" aria-label="Toggle navigation" id="menu-button">☰</button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="hero-content">
+      <h1>Your Name</h1>
+      <p>Frontend Developer &amp; UI/UX Enthusiast</p>
+    </div>
+  </header>
+
+  <main>
+    <section id="about" class="panel">
+      <h2>About</h2>
+      <p>Brief intro about yourself. Highlight what you build, technologies you enjoy, and your approach.</p>
+    </section>
+
+    <section id="skills" class="panel">
+      <h2>Skills</h2>
+      <div class="skills-row">
+        <div class="skill">HTML5</div>
+        <div class="skill">CSS3</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">React</div>
+        <div class="skill">Accessibility</div>
+      </div>
+    </section>
+
+    <section id="projects" class="panel">
+      <h2>Projects</h2>
+      <div id="projects-grid">
+        <article class="project-card">
+          <h3>Project One</h3>
+          <p>Short description of project one.</p>
+          <a href="#" class="btn">View</a>
+        </article>
+
+        <article class="project-card">
+          <h3>Project Two</h3>
+          <p>Short description of project two.</p>
+          <a href="#" class="btn">View</a>
+        </article>
+
+        <article class="project-card">
+          <h3>Project Three</h3>
+          <p>Short description of project three.</p>
+          <a href="#" class="btn">View</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="panel">
+      <h2>Contact</h2>
+      <form id="contact-form-id" novalidate>
+        <label for="name">Name <span aria-hidden="true">*</span></label>
+        <input id="name" name="name" type="text" required>
+
+        <label for="email">Email <span aria-hidden="true">*</span></label>
+        <input id="email" name="email" type="email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4"></textarea>
+
+        <div id="form-message" role="status" aria-live="polite"></div>
+
+        <button type="submit" class="btn primary">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Your Name — Built with HTML, CSS & JavaScript.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
